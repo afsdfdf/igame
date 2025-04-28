@@ -2,6 +2,9 @@
 
 # dependencies
 /node_modules
+package-lock.json
+bun.lockb
+.bun/
 
 # next.js
 /.next/
