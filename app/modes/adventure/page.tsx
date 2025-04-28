@@ -20,75 +20,77 @@ export default function AdventureModePage() {
     return (
       <MobilePageWrapper
         mobileContent={
-          <MobileModePage
-            title="冒险副本"
-            description="踏上程序生成世界的史诗之旅。发现隐藏的宝藏，完成任务，揭开 AIGAME 宇宙的秘密。"
-            heroImage="/images/adventure-hero.jpg"
-            badgeColor="bg-purple-700 hover:bg-purple-800"
-            features={[
-              {
-                icon: <Map className="h-6 w-6 text-purple-400" />,
-                title: "程序生成世界",
-                description: "每次冒险都在独特生成的世界中进行，带来不同的挑战。"
-              },
-              {
-                icon: <Scroll className="h-6 w-6 text-purple-400" />,
-                title: "任务系统",
-                description: "完成主线和支线任务，获得特殊奖励并解锁新区域。"
-              },
-              {
-                icon: <Gem className="h-6 w-6 text-purple-400" />,
-                title: "寻宝探险",
-                description: "发现散布在世界各地的隐藏宝藏和稀有 NFT。"
-              }
-            ]}
-            gameplayImage="/images/adventure-gameplay.jpg"
-            gameplayTitle="沉浸式探索"
-            gameplayDescription="冒险模式提供丰富的沉浸式体验，你可以探索广阔的景观，与 NPC 互动，揭开 AIGAME 宇宙的传说。"
-            gameplayFeatures={[
-              {
-                icon: <Compass className="h-5 w-5 text-purple-400" />,
-                title: "动态世界",
-                description: "世界会根据你的行动和选择而变化，创造独特的体验。"
-              },
-              {
-                icon: <Footprints className="h-5 w-5 text-purple-400" />,
-                title: "多重路径",
-                description: "选择你自己的冒险，体验分支剧情和多种结局。"
-              },
-              {
-                icon: <Mountain className="h-5 w-5 text-purple-400" />,
-                title: "多样环境",
-                description: "探索森林、山脉、沙漠和神秘遗迹，每个环境都有独特的挑战。"
-              }
-            ]}
-            rewards={[
-              {
-                title: "冒险徽章 Tier 1",
-                description: "完成 10 个任务后获得",
-                rarity: "普通",
-                bonus: "+5% 探索奖励"
-              },
-              {
-                title: "冒险徽章 Tier 2",
-                description: "完成 25 个任务后获得",
-                rarity: "稀有",
-                bonus: "+10% 探索奖励"
-              },
-              {
-                title: "冒险徽章 Tier 3",
-                description: "完成 50 个任务后获得",
-                rarity: "史诗",
-                bonus: "+15% 探索奖励"
-              },
-              {
-                title: "冒险徽章 Tier 4",
-                description: "完成 100 个任务后获得",
-                rarity: "传说",
-                bonus: "+20% 探索奖励"
-              }
-            ]}
-          />
+          <>
+            <MobileModePage
+              title="冒险副本"
+              description="踏上程序生成世界的史诗之旅。发现隐藏的宝藏，完成任务，揭开 AIGAME 宇宙的秘密。"
+              heroImage="/images/adventure-hero.jpg"
+              badgeColor="bg-purple-700 hover:bg-purple-800"
+              features={[
+                {
+                  icon: <Map className="h-6 w-6 text-purple-400" />,
+                  title: "程序生成世界",
+                  description: "每次冒险都在独特生成的世界中进行，带来不同的挑战。"
+                },
+                {
+                  icon: <Scroll className="h-6 w-6 text-purple-400" />,
+                  title: "任务系统",
+                  description: "完成主线和支线任务，获得特殊奖励并解锁新区域。"
+                },
+                {
+                  icon: <Gem className="h-6 w-6 text-purple-400" />,
+                  title: "寻宝探险",
+                  description: "发现散布在世界各地的隐藏宝藏和稀有 NFT。"
+                }
+              ]}
+              gameplayImage="/images/adventure-gameplay.jpg"
+              gameplayTitle="沉浸式探索"
+              gameplayDescription="冒险模式提供丰富的沉浸式体验，你可以探索广阔的景观，与 NPC 互动，揭开 AIGAME 宇宙的传说。"
+              gameplayFeatures={[
+                {
+                  icon: <Compass className="h-5 w-5 text-purple-400" />,
+                  title: "动态世界",
+                  description: "世界会根据你的行动和选择而变化，创造独特的体验。"
+                },
+                {
+                  icon: <Footprints className="h-5 w-5 text-purple-400" />,
+                  title: "多重路径",
+                  description: "选择你自己的冒险，体验分支剧情和多种结局。"
+                },
+                {
+                  icon: <Mountain className="h-5 w-5 text-purple-400" />,
+                  title: "多样环境",
+                  description: "探索森林、山脉、沙漠和神秘遗迹，每个环境都有独特的挑战。"
+                }
+              ]}
+              rewards={[
+                {
+                  title: "冒险徽章 Tier 1",
+                  description: "完成 10 个任务后获得",
+                  rarity: "普通",
+                  bonus: "+5% 探索奖励"
+                },
+                {
+                  title: "冒险徽章 Tier 2",
+                  description: "完成 25 个任务后获得",
+                  rarity: "稀有",
+                  bonus: "+10% 探索奖励"
+                },
+                {
+                  title: "冒险徽章 Tier 3",
+                  description: "完成 50 个任务后获得",
+                  rarity: "史诗",
+                  bonus: "+15% 探索奖励"
+                },
+                {
+                  title: "冒险徽章 Tier 4",
+                  description: "完成 100 个任务后获得",
+                  rarity: "传说",
+                  bonus: "+20% 探索奖励"
+                }
+              ]}
+            />
+          </>
         }
       >
         <main className="min-h-screen bg-black text-white">
@@ -104,7 +106,7 @@ export default function AdventureModePage() {
             <div className="container mx-auto px-4 relative z-10">
               <Badge className="mb-4 bg-purple-700 hover:bg-purple-800 text-white px-4 py-1">ADVENTURE MODE</Badge>
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                <AnimatedGradientText>Explore & Discover</AnimatedGradientText>
+                <AnimatedGradientText text="Explore & Discover" />
               </h1>
               <p className="text-xl text-gray-300 max-w-2xl mb-8">
                 Embark on epic journeys through procedurally generated worlds. Discover hidden treasures, complete quests,
@@ -296,9 +298,6 @@ export default function AdventureModePage() {
               </div>
             </div>
           </section>
-
-          {/* Footer */}
-          <Footer />
         </main>
       </MobilePageWrapper>
     )
@@ -318,7 +317,7 @@ export default function AdventureModePage() {
         <div className="container mx-auto px-4 relative z-10">
           <Badge className="mb-4 bg-purple-700 hover:bg-purple-800 text-white px-4 py-1">ADVENTURE MODE</Badge>
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            <AnimatedGradientText>Explore & Discover</AnimatedGradientText>
+            <AnimatedGradientText text="Explore & Discover" />
           </h1>
           <p className="text-xl text-gray-300 max-w-2xl mb-8">
             Embark on epic journeys through procedurally generated worlds. Discover hidden treasures, complete quests,
@@ -510,9 +509,6 @@ export default function AdventureModePage() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <Footer />
     </main>
   )
 }

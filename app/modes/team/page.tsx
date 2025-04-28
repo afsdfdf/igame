@@ -20,75 +20,77 @@ export default function TeamModePage() {
     return (
       <MobilePageWrapper
         mobileContent={
-          <MobileModePage
-            title="对战副本"
-            description="组建联盟，协调策略，一起主宰战场。团队游戏玩法，共享奖励和成就。"
-            heroImage="/images/team-hero.jpg"
-            badgeColor="bg-green-700 hover:bg-green-800"
-            features={[
-              {
-                icon: <Users className="h-6 w-6 text-green-400" />,
-                title: "小队组建",
-                description: "创建或加入 2-5 人的团队，技能互补。"
-              },
-              {
-                icon: <Shield className="h-6 w-6 text-green-400" />,
-                title: "角色专精",
-                description: "选择具有独特能力和协同效应的专业角色。"
-              },
-              {
-                icon: <Trophy className="h-6 w-6 text-green-400" />,
-                title: "团队排名",
-                description: "攀登全球团队排行榜，获得专属奖励。"
-              }
-            ]}
-            gameplayImage="/images/team-gameplay.jpg"
-            gameplayTitle="协调制胜"
-            gameplayDescription="团队模式强调协调、策略和角色专精。与你的小队一起完成目标，克服单人无法完成的挑战。"
-            gameplayFeatures={[
-              {
-                icon: <Target className="h-5 w-5 text-green-400" />,
-                title: "目标导向任务",
-                description: "完成需要团队合作和协调的战略目标。"
-              },
-              {
-                icon: <Swords className="h-5 w-5 text-green-400" />,
-                title: "团队对战",
-                description: "在激烈的 5v5 竞技比赛中与其他小队竞争。"
-              },
-              {
-                icon: <Flag className="h-5 w-5 text-green-400" />,
-                title: "领土控制",
-                description: "占领并控制战略点，为团队获得被动奖励。"
-              }
-            ]}
-            rewards={[
-              {
-                title: "团队徽章 Tier 1",
-                description: "完成 10 场团队比赛后获得",
-                rarity: "普通",
-                bonus: "+5% 团队奖励"
-              },
-              {
-                title: "团队徽章 Tier 2",
-                description: "完成 25 场团队比赛后获得",
-                rarity: "稀有",
-                bonus: "+10% 团队奖励"
-              },
-              {
-                title: "团队徽章 Tier 3",
-                description: "完成 50 场团队比赛后获得",
-                rarity: "史诗",
-                bonus: "+15% 团队奖励"
-              },
-              {
-                title: "团队徽章 Tier 4",
-                description: "完成 100 场团队比赛后获得",
-                rarity: "传说",
-                bonus: "+20% 团队奖励"
-              }
-            ]}
-          />
+          <>
+            <MobileModePage
+              title="对战副本"
+              description="组建联盟，协调策略，一起主宰战场。团队游戏玩法，共享奖励和成就。"
+              heroImage="/images/team-hero.jpg"
+              badgeColor="bg-green-700 hover:bg-green-800"
+              features={[
+                {
+                  icon: <Users className="h-6 w-6 text-green-400" />,
+                  title: "小队组建",
+                  description: "创建或加入 2-5 人的团队，技能互补。"
+                },
+                {
+                  icon: <Shield className="h-6 w-6 text-green-400" />,
+                  title: "角色专精",
+                  description: "选择具有独特能力和协同效应的专业角色。"
+                },
+                {
+                  icon: <Trophy className="h-6 w-6 text-green-400" />,
+                  title: "团队排名",
+                  description: "攀登全球团队排行榜，获得专属奖励。"
+                }
+              ]}
+              gameplayImage="/images/team-gameplay.jpg"
+              gameplayTitle="协调制胜"
+              gameplayDescription="团队模式强调协调、策略和角色专精。与你的小队一起完成目标，克服单人无法完成的挑战。"
+              gameplayFeatures={[
+                {
+                  icon: <Target className="h-5 w-5 text-green-400" />,
+                  title: "目标导向任务",
+                  description: "完成需要团队合作和协调的战略目标。"
+                },
+                {
+                  icon: <Swords className="h-5 w-5 text-green-400" />,
+                  title: "团队对战",
+                  description: "在激烈的 5v5 竞技比赛中与其他小队竞争。"
+                },
+                {
+                  icon: <Flag className="h-5 w-5 text-green-400" />,
+                  title: "领土控制",
+                  description: "占领并控制战略点，为团队获得被动奖励。"
+                }
+              ]}
+              rewards={[
+                {
+                  title: "团队徽章 Tier 1",
+                  description: "完成 10 场团队比赛后获得",
+                  rarity: "普通",
+                  bonus: "+5% 团队奖励"
+                },
+                {
+                  title: "团队徽章 Tier 2",
+                  description: "完成 25 场团队比赛后获得",
+                  rarity: "稀有",
+                  bonus: "+10% 团队奖励"
+                },
+                {
+                  title: "团队徽章 Tier 3",
+                  description: "完成 50 场团队比赛后获得",
+                  rarity: "史诗",
+                  bonus: "+15% 团队奖励"
+                },
+                {
+                  title: "团队徽章 Tier 4",
+                  description: "完成 100 场团队比赛后获得",
+                  rarity: "传说",
+                  bonus: "+20% 团队奖励"
+                }
+              ]}
+            />
+          </>
         }
       >
         <main className="min-h-screen bg-black text-white">
@@ -104,7 +106,7 @@ export default function TeamModePage() {
             <div className="container mx-auto px-4 relative z-10">
               <Badge className="mb-4 bg-green-700 hover:bg-green-800 text-white px-4 py-1">TEAM MODE</Badge>
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                <AnimatedGradientText>Strategic Team Play</AnimatedGradientText>
+                <AnimatedGradientText text="Strategic Team Play" />
               </h1>
               <p className="text-xl text-gray-300 max-w-2xl mb-8">
                 Form alliances, coordinate strategies, and dominate the battlefield together. Team-based gameplay with
@@ -317,8 +319,34 @@ export default function TeamModePage() {
             </div>
           </section>
 
-          {/* Footer */}
-          <Footer />
+          {/* Team Dashboard Section */}
+          <section className="py-20 bg-gradient-to-b from-black to-green-950/20">
+            <div className="container mx-auto px-4">
+              <h2 className="text-3xl font-bold mb-12 text-center">Team Dashboard</h2>
+
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                {[1, 2, 3, 4].map((i) => (
+                  <Card
+                    key={i}
+                    className="bg-black/40 backdrop-blur-sm border border-green-500/30 hover:border-green-500/50 transition-all duration-300"
+                  >
+                    <CardContent className="p-6">
+                      <h3 className="text-lg font-bold mb-1">Team Stats {i}</h3>
+                      <p className="text-gray-400 text-sm mb-3">Performance metrics for team activities</p>
+                      <div className="flex justify-between items-center">
+                        <span className="text-xs text-gray-500">Wins: {i * 12}</span>
+                        <span className="text-xs text-green-400">Rating: {i * 250} pts</span>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+
+              <div className="mt-12 text-center">
+                <GlowButton variant="green">View Team Details</GlowButton>
+              </div>
+            </div>
+          </section>
         </main>
       </MobilePageWrapper>
     )
@@ -338,7 +366,7 @@ export default function TeamModePage() {
         <div className="container mx-auto px-4 relative z-10">
           <Badge className="mb-4 bg-green-700 hover:bg-green-800 text-white px-4 py-1">TEAM MODE</Badge>
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            <AnimatedGradientText>Strategic Team Play</AnimatedGradientText>
+            <AnimatedGradientText text="Strategic Team Play" />
           </h1>
           <p className="text-xl text-gray-300 max-w-2xl mb-8">
             Form alliances, coordinate strategies, and dominate the battlefield together. Team-based gameplay with
@@ -551,8 +579,34 @@ export default function TeamModePage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <Footer />
+      {/* Team Dashboard Section */}
+      <section className="py-20 bg-gradient-to-b from-black to-green-950/20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-12 text-center">Team Dashboard</h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            {[1, 2, 3, 4].map((i) => (
+              <Card
+                key={i}
+                className="bg-black/40 backdrop-blur-sm border border-green-500/30 hover:border-green-500/50 transition-all duration-300"
+              >
+                <CardContent className="p-6">
+                  <h3 className="text-lg font-bold mb-1">Team Stats {i}</h3>
+                  <p className="text-gray-400 text-sm mb-3">Performance metrics for team activities</p>
+                  <div className="flex justify-between items-center">
+                    <span className="text-xs text-gray-500">Wins: {i * 12}</span>
+                    <span className="text-xs text-green-400">Rating: {i * 250} pts</span>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <GlowButton variant="green">View Team Details</GlowButton>
+          </div>
+        </div>
+      </section>
     </main>
   )
 }

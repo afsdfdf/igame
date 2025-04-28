@@ -10,7 +10,7 @@ const nfts = [
     id: 1,
     name: "Cosmic Guardian",
     rarity: "Legendary",
-    image: "/images/nft-badge1.jpg",
+    image: "/images/CosmicGuardian.png",
     description: "Grants +15% earnings in all game modes",
     attributes: ["Animated", "Boosts Earnings", "Limited Edition"],
   },
@@ -18,7 +18,7 @@ const nfts = [
     id: 2,
     name: "Digital Warrior",
     rarity: "Epic",
-    image: "/images/nft-badge2.jpg",
+    image: "/images/DigitalWarrior.png",
     description: "Unlocks exclusive PVP tournaments",
     attributes: ["Animated", "Tournament Access", "Special Effects"],
   },
@@ -26,7 +26,7 @@ const nfts = [
     id: 3,
     name: "Cyber Mage",
     rarity: "Rare",
-    image: "/images/nft-badge3.jpg",
+    image: "/images/CyberMage.png",
     description: "Provides special abilities in adventure mode",
     attributes: ["Skill Boost", "Custom Animation", "Tradeable"],
   },
@@ -34,7 +34,7 @@ const nfts = [
     id: 4,
     name: "Neon Assassin",
     rarity: "Epic",
-    image: "/images/nft-badge4.jpg",
+    image: "/images/NeonAssassin.png",
     description: "Unlocks hidden areas in all game modes",
     attributes: ["Area Access", "Glowing Effect", "Tradeable"],
   },
@@ -57,81 +57,71 @@ export default function NFTShowcase() {
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-      {/* Featured NFT */}
-      <div className="relative">
-        <Card
-          className={cn(
-            "overflow-hidden border-2 bg-black/40 backdrop-blur-sm h-[500px]",
-            `border-${activeNft.rarity === "Legendary" ? "yellow" : activeNft.rarity === "Epic" ? "purple" : "blue"}-500`,
-          )}
-        >
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/80 z-10"></div>
-          <div className="absolute inset-0">
-            <div className="w-full h-full relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-black/40 to-transparent z-10"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-64 h-64 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 animate-pulse filter blur-xl"></div>
-              </div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-full h-full relative">
-                  <div className="absolute inset-0 flex items-center justify-center text-sm text-cyan-400">
-                    {activeNft.name} NFT
-                  </div>
-                </div>
+      {/* Featured NFT - 大图显示 */}
+      <div className="relative bg-gray-900 rounded-xl overflow-hidden border-2 border-yellow-500 shadow-xl h-[500px]">
+        <div className="flex flex-col h-full">
+          {/* 主图片区 - 填充并裁剪 */}
+          <div className="flex-1 relative overflow-hidden mb-4">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 z-0"></div>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-[320px] h-[320px] relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl opacity-50 blur-md animate-pulse"></div>
+                <img
+                  src={activeNft.image}
+                  alt={activeNft.name}
+                  className="absolute inset-0 w-full h-full object-cover rounded-xl shadow-[0_0_15px_rgba(123,104,238,0.6)] transition-transform duration-700 hover:scale-105 z-10"
+                />
               </div>
             </div>
           </div>
 
-          <CardContent className="relative z-20 h-full flex flex-col justify-end p-8">
-            <Badge className={cn("self-start mb-4 bg-gradient-to-r", getRarityColor(activeNft.rarity))}>
+          {/* 信息区 */}
+          <div className="mt-auto px-4">
+            <Badge className={`mb-2 bg-gradient-to-r ${getRarityColor(activeNft.rarity)} shadow-lg`}>
               {activeNft.rarity}
             </Badge>
-            <h3 className="text-3xl font-bold mb-2 text-white">{activeNft.name}</h3>
-            <p className="text-gray-300 mb-6">{activeNft.description}</p>
-
+            <h3 className="text-2xl font-bold mb-2 text-white drop-shadow-lg">{activeNft.name}</h3>
+            <p className="text-gray-300 mb-4">{activeNft.description}</p>
             <div className="flex flex-wrap gap-2">
               {activeNft.attributes.map((attr, index) => (
-                <span key={index} className="px-3 py-1 rounded-full text-xs bg-white/10 text-white">
+                <span key={index} className="px-3 py-1 rounded-full text-xs bg-white/10 text-white backdrop-blur-sm hover:bg-white/20 transition-colors">
                   {attr}
                 </span>
               ))}
             </div>
-          </CardContent>
-        </Card>
+          </div>
+        </div>
       </div>
 
-      {/* NFT Grid */}
+      {/* NFT Grid - 小卡片 */}
       <div className="grid grid-cols-2 gap-4">
         {nfts.map((nft) => (
-          <Card
+          <div
             key={nft.id}
-            className={cn(
-              "overflow-hidden border-2 cursor-pointer transition-all duration-300 hover:scale-105",
-              activeNft.id === nft.id
-                ? `border-${nft.rarity === "Legendary" ? "yellow" : nft.rarity === "Epic" ? "purple" : "blue"}-500`
-                : "border-gray-800",
-              "bg-black/40 backdrop-blur-sm",
-            )}
+            className={`bg-gray-900 rounded-xl overflow-hidden ${
+              activeNft.id === nft.id 
+                ? "border-2 border-purple-500 shadow-[0_0_15px_rgba(168,85,247,0.5)]" 
+                : "border-2 border-gray-800"
+            } cursor-pointer hover:border-purple-400 hover:shadow-[0_0_10px_rgba(168,85,247,0.4)] transition-all duration-300`}
             onClick={() => setActiveNft(nft)}
           >
-            <div className="relative h-40">
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/80 z-10"></div>
-              <div className="absolute inset-0">
-                <div className="w-full h-full relative">
-                  <div className="absolute inset-0 flex items-center justify-center text-sm text-cyan-400">
-                    {nft.name}
-                  </div>
-                </div>
+            {/* 小图片区 - 填充并裁剪 */}
+            <div className="h-40 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-b from-blue-500/10 to-purple-500/10"></div>
+              <img
+                src={nft.image}
+                alt={nft.name}
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-40"></div>
+            </div>
+            <div className="p-3">
+              <h4 className="font-medium text-white text-center">{nft.name}</h4>
+              <div className="flex justify-center mt-2">
+                <Badge className={`bg-gradient-to-r ${getRarityColor(nft.rarity)} shadow-sm`}>{nft.rarity}</Badge>
               </div>
             </div>
-
-            <CardContent className="relative z-20 p-4">
-              <div className="flex justify-between items-center">
-                <h4 className="font-medium text-white">{nft.name}</h4>
-                <Badge className={cn("bg-gradient-to-r", getRarityColor(nft.rarity))}>{nft.rarity}</Badge>
-              </div>
-            </CardContent>
-          </Card>
+          </div>
         ))}
       </div>
     </div>

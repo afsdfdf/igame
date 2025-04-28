@@ -60,7 +60,7 @@ export default function MobileModePage({
         <div className="container mx-auto px-4 relative z-10">
           <Badge className={`mb-4 ${badgeColor} text-white px-4 py-1`}>{title.toUpperCase()}</Badge>
           <h1 className="text-3xl font-bold mb-4">
-            <AnimatedGradientText>{title}</AnimatedGradientText>
+            <AnimatedGradientText text={title} />
           </h1>
           <p className="text-lg text-gray-300 mb-6">
             {description}
@@ -170,9 +170,9 @@ export default function MobileModePage({
           </div>
         </div>
       </section>
-
+      
       {/* Footer */}
       <Footer />
     </main>
   )
-} 
+}

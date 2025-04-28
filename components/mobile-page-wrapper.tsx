@@ -25,4 +25,4 @@ export function MobilePageWrapper({ children, mobileContent }: MobilePageWrapper
   }
 
   return <>{children}</>
-} 
+}

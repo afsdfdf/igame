@@ -20,75 +20,77 @@ export default function CasualModePage() {
     return (
       <MobilePageWrapper
         mobileContent={
-          <MobileModePage
-            title="娱乐副本"
-            description="与朋友一起享受轻松愉快的游戏，或独自放松。按照自己的节奏获得奖励。"
-            heroImage="/images/casual-hero.jpg"
-            badgeColor="bg-blue-700 hover:bg-blue-800"
-            features={[
-              {
-                icon: <Gamepad2 className="h-6 w-6 text-blue-400" />,
-                title: "迷你游戏",
-                description: "快速有趣的游戏，适合短时间游戏。"
-              },
-              {
-                icon: <Sparkles className="h-6 w-6 text-blue-400" />,
-                title: "NFT 碎片",
-                description: "收集特殊碎片，可以组合成有价值的 NFT。"
-              },
-              {
-                icon: <Users className="h-6 w-6 text-blue-400" />,
-                title: "社交游戏",
-                description: "与朋友一起玩，获得团队活动奖励。"
-              }
-            ]}
-            gameplayImage="/images/casual-gameplay.jpg"
-            gameplayTitle="轻松游戏体验"
-            gameplayDescription="娱乐模式提供各种轻松愉快的游戏，专为娱乐和放松而设计。适合新玩家或想要放松同时获得奖励的玩家。"
-            gameplayFeatures={[
-              {
-                icon: <Clock className="h-5 w-5 text-blue-400" />,
-                title: "快速游戏",
-                description: "1-3 分钟即可完成的游戏，适合随时随地的游戏。"
-              },
-              {
-                icon: <Puzzle className="h-5 w-5 text-blue-400" />,
-                title: "多样游戏",
-                description: "从益智游戏到卡牌游戏，总有一款适合你。"
-              },
-              {
-                icon: <Sparkles className="h-5 w-5 text-blue-400" />,
-                title: "每日奖励",
-                description: "每日登录获得特殊奖励和碎片掉落。"
-              }
-            ]}
-            rewards={[
-              {
-                title: "游戏碎片 Tier 1",
-                description: "完成 10 场游戏后获得",
-                rarity: "普通",
-                bonus: "+5% 碎片掉落"
-              },
-              {
-                title: "游戏碎片 Tier 2",
-                description: "完成 25 场游戏后获得",
-                rarity: "稀有",
-                bonus: "+10% 碎片掉落"
-              },
-              {
-                title: "游戏碎片 Tier 3",
-                description: "完成 50 场游戏后获得",
-                rarity: "史诗",
-                bonus: "+15% 碎片掉落"
-              },
-              {
-                title: "游戏碎片 Tier 4",
-                description: "完成 100 场游戏后获得",
-                rarity: "传说",
-                bonus: "+20% 碎片掉落"
-              }
-            ]}
-          />
+          <>
+            <MobileModePage
+              title="娱乐副本"
+              description="与朋友一起享受轻松愉快的游戏，或独自放松。按照自己的节奏获得奖励。"
+              heroImage="/images/casual-hero.jpg"
+              badgeColor="bg-blue-700 hover:bg-blue-800"
+              features={[
+                {
+                  icon: <Gamepad2 className="h-6 w-6 text-blue-400" />,
+                  title: "迷你游戏",
+                  description: "快速有趣的游戏，适合短时间游戏。"
+                },
+                {
+                  icon: <Sparkles className="h-6 w-6 text-blue-400" />,
+                  title: "NFT 碎片",
+                  description: "收集特殊碎片，可以组合成有价值的 NFT。"
+                },
+                {
+                  icon: <Users className="h-6 w-6 text-blue-400" />,
+                  title: "社交游戏",
+                  description: "与朋友一起玩，获得团队活动奖励。"
+                }
+              ]}
+              gameplayImage="/images/casual-gameplay.jpg"
+              gameplayTitle="轻松游戏体验"
+              gameplayDescription="娱乐模式提供各种轻松愉快的游戏，专为娱乐和放松而设计。适合新玩家或想要放松同时获得奖励的玩家。"
+              gameplayFeatures={[
+                {
+                  icon: <Clock className="h-5 w-5 text-blue-400" />,
+                  title: "快速游戏",
+                  description: "1-3 分钟即可完成的游戏，适合随时随地的游戏。"
+                },
+                {
+                  icon: <Puzzle className="h-5 w-5 text-blue-400" />,
+                  title: "多样游戏",
+                  description: "从益智游戏到卡牌游戏，总有一款适合你。"
+                },
+                {
+                  icon: <Sparkles className="h-5 w-5 text-blue-400" />,
+                  title: "每日奖励",
+                  description: "每日登录获得特殊奖励和碎片掉落。"
+                }
+              ]}
+              rewards={[
+                {
+                  title: "游戏碎片 Tier 1",
+                  description: "完成 10 场游戏后获得",
+                  rarity: "普通",
+                  bonus: "+5% 碎片掉落"
+                },
+                {
+                  title: "游戏碎片 Tier 2",
+                  description: "完成 25 场游戏后获得",
+                  rarity: "稀有",
+                  bonus: "+10% 碎片掉落"
+                },
+                {
+                  title: "游戏碎片 Tier 3",
+                  description: "完成 50 场游戏后获得",
+                  rarity: "史诗",
+                  bonus: "+15% 碎片掉落"
+                },
+                {
+                  title: "游戏碎片 Tier 4",
+                  description: "完成 100 场游戏后获得",
+                  rarity: "传说",
+                  bonus: "+20% 碎片掉落"
+                }
+              ]}
+            />
+          </>
         }
       >
         <main className="min-h-screen bg-black text-white">
@@ -104,7 +106,7 @@ export default function CasualModePage() {
             <div className="container mx-auto px-4 relative z-10">
               <Badge className="mb-4 bg-blue-700 hover:bg-blue-800 text-white px-4 py-1">CASUAL MODE</Badge>
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                <AnimatedGradientText>Fun & Relaxed Gaming</AnimatedGradientText>
+                <AnimatedGradientText text="Fun & Relaxed Gaming" />
               </h1>
               <p className="text-xl text-gray-300 max-w-2xl mb-8">
                 Enjoy light-hearted games with friends or solo. Perfect for unwinding while still earning rewards at your
@@ -305,9 +307,6 @@ export default function CasualModePage() {
               </div>
             </div>
           </section>
-
-          {/* Footer */}
-          <Footer />
         </main>
       </MobilePageWrapper>
     )
@@ -327,7 +326,7 @@ export default function CasualModePage() {
         <div className="container mx-auto px-4 relative z-10">
           <Badge className="mb-4 bg-blue-700 hover:bg-blue-800 text-white px-4 py-1">CASUAL MODE</Badge>
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            <AnimatedGradientText>Fun & Relaxed Gaming</AnimatedGradientText>
+            <AnimatedGradientText text="Fun & Relaxed Gaming" />
           </h1>
           <p className="text-xl text-gray-300 max-w-2xl mb-8">
             Enjoy light-hearted games with friends or solo. Perfect for unwinding while still earning rewards at your
@@ -528,9 +527,6 @@ export default function CasualModePage() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <Footer />
     </main>
   )
 }

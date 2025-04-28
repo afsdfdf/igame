@@ -37,75 +37,78 @@ export default function LuckyModePage() {
     return (
       <MobilePageWrapper
         mobileContent={
-          <MobileModePage
-            title="幸运副本"
-            description="每日链上抽奖，盲盒NFT开出稀有资产，概率透明上链，公平公正。"
-            heroImage="/images/lucky-hero.jpg"
-            badgeColor="bg-[#7D5FFF] hover:bg-[#7D5FFF]/80"
-            features={[
-              {
-                icon: <Dice5 className="h-6 w-6 text-[#00FFF0]" />,
-                title: "每日抽奖",
-                description: "每天一次免费抽奖机会，开启盲盒NFT。"
-              },
-              {
-                icon: <Package className="h-6 w-6 text-[#00FFF0]" />,
-                title: "盲盒NFT",
-                description: "开出稀有资产，可以在市场上交易。"
-              },
-              {
-                icon: <Sparkles className="h-6 w-6 text-[#00FFF0]" />,
-                title: "概率透明",
-                description: "所有概率都透明上链，确保公平公正。"
-              }
-            ]}
-            gameplayImage="/images/lucky-gameplay.jpg"
-            gameplayTitle="链上抽奖系统"
-            gameplayDescription="幸运副本是AIGAME平台上最具惊喜性的游戏模式。每天，您都可以参与链上抽奖，开启盲盒NFT，有机会获得稀有资产。"
-            gameplayFeatures={[
-              {
-                icon: <Dice5 className="h-5 w-5 text-[#00FFF0]" />,
-                title: "每日抽奖",
-                description: "每天一次免费抽奖机会，开启盲盒NFT。"
-              },
-              {
-                icon: <Package className="h-5 w-5 text-[#00FFF0]" />,
-                title: "盲盒NFT",
-                description: "开出稀有资产，可以在市场上交易。"
-              },
-              {
-                icon: <Sparkles className="h-5 w-5 text-[#00FFF0]" />,
-                title: "概率透明",
-                description: "所有概率都透明上链，确保公平公正。"
-              }
-            ]}
-            rewards={[
-              {
-                title: "普通盲盒",
-                description: "每日免费获得，有机会开出普通到稀有资产",
-                rarity: "普通",
-                bonus: "70% 普通资产"
-              },
-              {
-                title: "高级盲盒",
-                description: "使用游戏代币购买，提高获得稀有资产的概率",
-                rarity: "稀有",
-                bonus: "25% 稀有资产"
-              },
-              {
-                title: "传奇盲盒",
-                description: "限量发售，保证获得史诗或传奇资产",
-                rarity: "史诗",
-                bonus: "4% 史诗资产"
-              },
-              {
-                title: "限定盲盒",
-                description: "特殊活动限定，获得独特收藏品",
-                rarity: "传说",
-                bonus: "1% 传奇资产"
-              }
-            ]}
-          />
+          <>
+            <MobileModePage
+              title="幸运副本"
+              description="每日链上抽奖，盲盒NFT开出稀有资产，概率透明上链，公平公正。"
+              heroImage="/images/lucky-hero.jpg"
+              badgeColor="bg-[#7D5FFF] hover:bg-[#7D5FFF]/80"
+              features={[
+                {
+                  icon: <Dice5 className="h-6 w-6 text-[#00FFF0]" />,
+                  title: "每日抽奖",
+                  description: "每天一次免费抽奖机会，开启盲盒NFT。"
+                },
+                {
+                  icon: <Package className="h-6 w-6 text-[#00FFF0]" />,
+                  title: "盲盒NFT",
+                  description: "开出稀有资产，可以在市场上交易。"
+                },
+                {
+                  icon: <Sparkles className="h-6 w-6 text-[#00FFF0]" />,
+                  title: "概率透明",
+                  description: "所有概率都透明上链，确保公平公正。"
+                }
+              ]}
+              gameplayImage="/images/lucky-gameplay.jpg"
+              gameplayTitle="链上抽奖系统"
+              gameplayDescription="幸运副本是AIGAME平台上最具惊喜性的游戏模式。每天，您都可以参与链上抽奖，开启盲盒NFT，有机会获得稀有资产。"
+              gameplayFeatures={[
+                {
+                  icon: <Dice5 className="h-5 w-5 text-[#00FFF0]" />,
+                  title: "每日抽奖",
+                  description: "每天一次免费抽奖机会，开启盲盒NFT。"
+                },
+                {
+                  icon: <Package className="h-5 w-5 text-[#00FFF0]" />,
+                  title: "盲盒NFT",
+                  description: "开出稀有资产，可以在市场上交易。"
+                },
+                {
+                  icon: <Sparkles className="h-5 w-5 text-[#00FFF0]" />,
+                  title: "概率透明",
+                  description: "所有概率都透明上链，确保公平公正。"
+                }
+              ]}
+              rewards={[
+                {
+                  title: "普通盲盒",
+                  description: "每日免费获得，有机会开出普通到稀有资产",
+                  rarity: "普通",
+                  bonus: "70% 普通资产"
+                },
+                {
+                  title: "高级盲盒",
+                  description: "使用游戏代币购买，提高获得稀有资产的概率",
+                  rarity: "稀有",
+                  bonus: "25% 稀有资产"
+                },
+                {
+                  title: "传奇盲盒",
+                  description: "限量发售，保证获得史诗或传奇资产",
+                  rarity: "史诗",
+                  bonus: "4% 史诗资产"
+                },
+                {
+                  title: "限定盲盒",
+                  description: "特殊活动限定，获得独特收藏品",
+                  rarity: "传说",
+                  bonus: "1% 传奇资产"
+                }
+              ]}
+            />
+            <Footer />
+          </>
         }
       >
         <div className="min-h-screen bg-gradient-to-b from-[#0F0B1F] to-[#1A1333] text-white">
