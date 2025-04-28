@@ -184,9 +184,6 @@ export default function PVPModePage() {
               </div>
             </div>
           </section>
-
-          {/* Footer */}
-          <Footer />
         </main>
       </MobilePageWrapper>
     )
