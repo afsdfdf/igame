@@ -63,32 +63,6 @@ export default function PVPModePage() {
                   description: "1v1 决斗、2v2 团队战和 4 人自由对战。"
                 }
               ]}
-              rewards={[
-                {
-                  title: "胜利徽章 Tier 1",
-                  description: "获得 25 场 PVP 胜利后获得",
-                  rarity: "普通",
-                  bonus: "+5% SOL 收益"
-                },
-                {
-                  title: "胜利徽章 Tier 2",
-                  description: "获得 50 场 PVP 胜利后获得",
-                  rarity: "稀有",
-                  bonus: "+10% SOL 收益"
-                },
-                {
-                  title: "胜利徽章 Tier 3",
-                  description: "获得 75 场 PVP 胜利后获得",
-                  rarity: "史诗",
-                  bonus: "+15% SOL 收益"
-                },
-                {
-                  title: "胜利徽章 Tier 4",
-                  description: "获得 100 场 PVP 胜利后获得",
-                  rarity: "传说",
-                  bonus: "+20% SOL 收益"
-                }
-              ]}
             />
           </>
         }
@@ -207,42 +181,6 @@ export default function PVPModePage() {
                     <p className="text-gray-300">Join weekly tournaments with real-time spectating and commentary.</p>
                   </div>
                 </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Rewards Section */}
-          <section className="py-20 bg-gradient-to-b from-black to-yellow-950/20">
-            <div className="container mx-auto px-4">
-              <h2 className="text-3xl font-bold mb-12 text-center">PVP Rewards</h2>
-
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-                {[1, 2, 3, 4].map((i) => (
-                  <Card
-                    key={i}
-                    className="bg-black/40 backdrop-blur-sm border border-yellow-500/30 hover:border-yellow-500/50 transition-all duration-300"
-                  >
-                    <CardContent className="p-6">
-                      <div className="w-full aspect-square rounded-lg bg-gradient-to-br from-yellow-500/20 to-orange-500/20 flex items-center justify-center mb-4">
-                        <div className="text-center">
-                          <div className="text-yellow-400 text-lg font-bold">NFT Badge {i}</div>
-                        </div>
-                      </div>
-                      <h3 className="text-lg font-bold mb-1">Victory Badge Tier {i}</h3>
-                      <p className="text-gray-400 text-sm mb-3">Earned after {i * 25} PVP victories</p>
-                      <div className="flex justify-between items-center">
-                        <span className="text-xs text-gray-500">
-                          Rarity: {i === 4 ? "Legendary" : i === 3 ? "Epic" : i === 2 ? "Rare" : "Uncommon"}
-                        </span>
-                        <span className="text-xs text-yellow-400">+{i * 5}% SOL earnings</span>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-
-              <div className="mt-12 text-center">
-                <GlowButton variant="yellow">View All PVP Rewards</GlowButton>
               </div>
             </div>
           </section>
@@ -373,41 +311,7 @@ export default function PVPModePage() {
         </div>
       </section>
 
-      {/* Rewards Section */}
-      <section className="py-20 bg-gradient-to-b from-black to-yellow-950/20">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">PVP Rewards</h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            {[1, 2, 3, 4].map((i) => (
-              <Card
-                key={i}
-                className="bg-black/40 backdrop-blur-sm border border-yellow-500/30 hover:border-yellow-500/50 transition-all duration-300"
-              >
-                <CardContent className="p-6">
-                  <div className="w-full aspect-square rounded-lg bg-gradient-to-br from-yellow-500/20 to-orange-500/20 flex items-center justify-center mb-4">
-                    <div className="text-center">
-                      <div className="text-yellow-400 text-lg font-bold">NFT Badge {i}</div>
-                    </div>
-                  </div>
-                  <h3 className="text-lg font-bold mb-1">Victory Badge Tier {i}</h3>
-                  <p className="text-gray-400 text-sm mb-3">Earned after {i * 25} PVP victories</p>
-                  <div className="flex justify-between items-center">
-                    <span className="text-xs text-gray-500">
-                      Rarity: {i === 4 ? "Legendary" : i === 3 ? "Epic" : i === 2 ? "Rare" : "Uncommon"}
-                    </span>
-                    <span className="text-xs text-yellow-400">+{i * 5}% SOL earnings</span>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          <div className="mt-12 text-center">
-            <GlowButton variant="yellow">View All PVP Rewards</GlowButton>
-          </div>
-        </div>
-      </section>
+      <Footer />
     </main>
   )
 }

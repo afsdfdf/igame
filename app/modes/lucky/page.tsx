@@ -80,32 +80,6 @@ export default function LuckyModePage() {
                   description: "所有概率都透明上链，确保公平公正。"
                 }
               ]}
-              rewards={[
-                {
-                  title: "普通盲盒",
-                  description: "每日免费获得，有机会开出普通到稀有资产",
-                  rarity: "普通",
-                  bonus: "70% 普通资产"
-                },
-                {
-                  title: "高级盲盒",
-                  description: "使用游戏代币购买，提高获得稀有资产的概率",
-                  rarity: "稀有",
-                  bonus: "25% 稀有资产"
-                },
-                {
-                  title: "传奇盲盒",
-                  description: "限量发售，保证获得史诗或传奇资产",
-                  rarity: "史诗",
-                  bonus: "4% 史诗资产"
-                },
-                {
-                  title: "限定盲盒",
-                  description: "特殊活动限定，获得独特收藏品",
-                  rarity: "传说",
-                  bonus: "1% 传奇资产"
-                }
-              ]}
             />
             <Footer />
           </>
@@ -551,6 +525,8 @@ export default function LuckyModePage() {
           </div>
         </motion.div>
       </section>
+
+      <Footer />
     </div>
   )
 }

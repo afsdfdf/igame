@@ -63,32 +63,6 @@ export default function TeamModePage() {
                   description: "占领并控制战略点，为团队获得被动奖励。"
                 }
               ]}
-              rewards={[
-                {
-                  title: "团队徽章 Tier 1",
-                  description: "完成 10 场团队比赛后获得",
-                  rarity: "普通",
-                  bonus: "+5% 团队奖励"
-                },
-                {
-                  title: "团队徽章 Tier 2",
-                  description: "完成 25 场团队比赛后获得",
-                  rarity: "稀有",
-                  bonus: "+10% 团队奖励"
-                },
-                {
-                  title: "团队徽章 Tier 3",
-                  description: "完成 50 场团队比赛后获得",
-                  rarity: "史诗",
-                  bonus: "+15% 团队奖励"
-                },
-                {
-                  title: "团队徽章 Tier 4",
-                  description: "完成 100 场团队比赛后获得",
-                  rarity: "传说",
-                  bonus: "+20% 团队奖励"
-                }
-              ]}
             />
           </>
         }
@@ -273,48 +247,6 @@ export default function TeamModePage() {
                     </CardContent>
                   </Card>
                 ))}
-              </div>
-            </div>
-          </section>
-
-          {/* Team Rewards Section */}
-          <section className="py-20">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-12">
-                <Badge className="mb-4 bg-green-700 hover:bg-green-800 text-white px-4 py-1">TEAM REWARDS</Badge>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">Shared Success</h2>
-                <p className="text-gray-300 max-w-2xl mx-auto">
-                  Earn rewards together as a team and unlock special team-based achievements and collectibles.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-                {[1, 2, 3, 4].map((i) => (
-                  <Card
-                    key={i}
-                    className="bg-black/40 backdrop-blur-sm border border-green-500/30 hover:border-green-500/50 transition-all duration-300"
-                  >
-                    <CardContent className="p-6">
-                      <div className="w-full aspect-square rounded-lg bg-gradient-to-br from-green-500/20 to-emerald-500/20 flex items-center justify-center mb-4">
-                        <div className="text-center">
-                          <div className="text-green-400 text-lg font-bold">Team Badge {i}</div>
-                        </div>
-                      </div>
-                      <h3 className="text-lg font-bold mb-1">Team Achievement Tier {i}</h3>
-                      <p className="text-gray-400 text-sm mb-3">Earned after {i * 25} team victories</p>
-                      <div className="flex justify-between items-center">
-                        <span className="text-xs text-gray-500">
-                          Rarity: {i === 4 ? "Legendary" : i === 3 ? "Epic" : i === 2 ? "Rare" : "Uncommon"}
-                        </span>
-                        <span className="text-xs text-green-400">+{i * 5}% team rewards</span>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-
-              <div className="mt-12 text-center">
-                <GlowButton variant="green">View All Team Rewards</GlowButton>
               </div>
             </div>
           </section>
@@ -537,48 +469,6 @@ export default function TeamModePage() {
         </div>
       </section>
 
-      {/* Team Rewards Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <Badge className="mb-4 bg-green-700 hover:bg-green-800 text-white px-4 py-1">TEAM REWARDS</Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Shared Success</h2>
-            <p className="text-gray-300 max-w-2xl mx-auto">
-              Earn rewards together as a team and unlock special team-based achievements and collectibles.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            {[1, 2, 3, 4].map((i) => (
-              <Card
-                key={i}
-                className="bg-black/40 backdrop-blur-sm border border-green-500/30 hover:border-green-500/50 transition-all duration-300"
-              >
-                <CardContent className="p-6">
-                  <div className="w-full aspect-square rounded-lg bg-gradient-to-br from-green-500/20 to-emerald-500/20 flex items-center justify-center mb-4">
-                    <div className="text-center">
-                      <div className="text-green-400 text-lg font-bold">Team Badge {i}</div>
-                    </div>
-                  </div>
-                  <h3 className="text-lg font-bold mb-1">Team Achievement Tier {i}</h3>
-                  <p className="text-gray-400 text-sm mb-3">Earned after {i * 25} team victories</p>
-                  <div className="flex justify-between items-center">
-                    <span className="text-xs text-gray-500">
-                      Rarity: {i === 4 ? "Legendary" : i === 3 ? "Epic" : i === 2 ? "Rare" : "Uncommon"}
-                    </span>
-                    <span className="text-xs text-green-400">+{i * 5}% team rewards</span>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          <div className="mt-12 text-center">
-            <GlowButton variant="green">View All Team Rewards</GlowButton>
-          </div>
-        </div>
-      </section>
-
       {/* Team Dashboard Section */}
       <section className="py-20 bg-gradient-to-b from-black to-green-950/20">
         <div className="container mx-auto px-4">
@@ -607,6 +497,8 @@ export default function TeamModePage() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </main>
   )
 }

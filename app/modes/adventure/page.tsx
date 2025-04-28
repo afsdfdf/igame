@@ -63,32 +63,6 @@ export default function AdventureModePage() {
                   description: "探索森林、山脉、沙漠和神秘遗迹，每个环境都有独特的挑战。"
                 }
               ]}
-              rewards={[
-                {
-                  title: "冒险徽章 Tier 1",
-                  description: "完成 10 个任务后获得",
-                  rarity: "普通",
-                  bonus: "+5% 探索奖励"
-                },
-                {
-                  title: "冒险徽章 Tier 2",
-                  description: "完成 25 个任务后获得",
-                  rarity: "稀有",
-                  bonus: "+10% 探索奖励"
-                },
-                {
-                  title: "冒险徽章 Tier 3",
-                  description: "完成 50 个任务后获得",
-                  rarity: "史诗",
-                  bonus: "+15% 探索奖励"
-                },
-                {
-                  title: "冒险徽章 Tier 4",
-                  description: "完成 100 个任务后获得",
-                  rarity: "传说",
-                  bonus: "+20% 探索奖励"
-                }
-              ]}
             />
           </>
         }
@@ -232,19 +206,16 @@ export default function AdventureModePage() {
                   {
                     name: "Crystal Caverns",
                     difficulty: "Medium",
-                    rewards: "Gem NFTs, Rare Materials",
                     description: "A vast network of underground caves filled with glowing crystals and hidden treasures.",
                   },
                   {
                     name: "Skyward Peaks",
                     difficulty: "Hard",
-                    rewards: "Legendary Equipment, SOL Bonuses",
                     description: "Treacherous mountain ranges with challenging terrain and powerful guardians.",
                   },
                   {
                     name: "Forgotten Ruins",
                     difficulty: "Expert",
-                    rewards: "Ancient Artifacts, Exclusive NFTs",
                     description: "The remains of an ancient civilization with complex puzzles and valuable relics.",
                   },
                 ].map((map, index) => (
@@ -281,13 +252,6 @@ export default function AdventureModePage() {
                     <CardContent className="p-6">
                       <h3 className="text-xl font-bold mb-2">{map.name}</h3>
                       <p className="text-gray-300 text-sm mb-4">{map.description}</p>
-
-                      <div className="bg-purple-900/20 p-3 rounded-lg">
-                        <div className="flex justify-between items-center">
-                          <span className="text-sm text-gray-300">Rewards:</span>
-                          <span className="text-sm text-purple-300">{map.rewards}</span>
-                        </div>
-                      </div>
                     </CardContent>
                   </Card>
                 ))}
@@ -443,19 +407,16 @@ export default function AdventureModePage() {
               {
                 name: "Crystal Caverns",
                 difficulty: "Medium",
-                rewards: "Gem NFTs, Rare Materials",
                 description: "A vast network of underground caves filled with glowing crystals and hidden treasures.",
               },
               {
                 name: "Skyward Peaks",
                 difficulty: "Hard",
-                rewards: "Legendary Equipment, SOL Bonuses",
                 description: "Treacherous mountain ranges with challenging terrain and powerful guardians.",
               },
               {
                 name: "Forgotten Ruins",
                 difficulty: "Expert",
-                rewards: "Ancient Artifacts, Exclusive NFTs",
                 description: "The remains of an ancient civilization with complex puzzles and valuable relics.",
               },
             ].map((map, index) => (
@@ -492,13 +453,6 @@ export default function AdventureModePage() {
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold mb-2">{map.name}</h3>
                   <p className="text-gray-300 text-sm mb-4">{map.description}</p>
-
-                  <div className="bg-purple-900/20 p-3 rounded-lg">
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm text-gray-300">Rewards:</span>
-                      <span className="text-sm text-purple-300">{map.rewards}</span>
-                    </div>
-                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -509,6 +463,8 @@ export default function AdventureModePage() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </main>
   )
 }
