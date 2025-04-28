@@ -1,5 +1,4 @@
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
 
 export default function NotFoundPage() {
   return (
@@ -11,10 +10,11 @@ export default function NotFoundPage() {
         <p className="text-xl text-gray-300 mb-8">
           The page you are looking for doesn't exist or has been moved.
         </p>
-        <Link href="/">
-          <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white">
-            Return to Home
-          </Button>
+        <Link 
+          href="/" 
+          className="inline-block px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white rounded-md font-medium transition-colors"
+        >
+          Return to Home
         </Link>
       </div>
     </main>
