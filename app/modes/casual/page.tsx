@@ -63,6 +63,7 @@ export default function CasualModePage() {
                   description: "每日登录获得特殊奖励和碎片掉落。"
                 }
               ]}
+              rewards={[]}
             />
           </>
         }
@@ -191,9 +192,9 @@ export default function CasualModePage() {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {[
-                  { title: "Crypto Puzzler", players: "5,432" },
-                  { title: "Card Collector", players: "8,765" },
-                  { title: "Block Builder", players: "3,210" },
+                  { title: "Crypto Puzzler", players: "5,432", reward: "Fragment NFTs" },
+                  { title: "Card Collector", players: "8,765", reward: "Rare Cards" },
+                  { title: "Block Builder", players: "3,210", reward: "Building Materials" },
                 ].map((game, index) => (
                   <Card
                     key={index}
@@ -218,6 +219,12 @@ export default function CasualModePage() {
                         </span>
                         <Badge className="bg-blue-500/20 text-blue-300 hover:bg-blue-500/30">Casual</Badge>
                       </div>
+                      <div className="bg-blue-900/20 p-3 rounded-lg">
+                        <div className="flex justify-between items-center">
+                          <span className="text-sm text-gray-300">Rewards:</span>
+                          <span className="text-sm text-blue-300">{game.reward}</span>
+                        </div>
+                      </div>
                     </CardContent>
                   </Card>
                 ))}
@@ -225,6 +232,53 @@ export default function CasualModePage() {
 
               <div className="mt-12 text-center">
                 <GlowButton variant="cyan">View All Casual Games</GlowButton>
+              </div>
+            </div>
+          </section>
+
+          {/* NFT Fragments Section */}
+          <section className="py-20">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-12">
+                <Badge className="mb-4 bg-blue-700 hover:bg-blue-800 text-white px-4 py-1">NFT FRAGMENTS</Badge>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">Collect & Combine</h2>
+                <p className="text-gray-300 max-w-2xl mx-auto">
+                  Earn fragment NFTs through casual gameplay and combine them to create powerful items and collectibles.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                {[1, 2, 3, 4].map((i) => (
+                  <div
+                    key={i}
+                    className="relative aspect-square rounded-lg overflow-hidden border border-blue-500/30 group"
+                  >
+                    <div className="absolute inset-0">
+                      <div className="w-full h-full relative">
+                        <div className="absolute inset-0 flex items-center justify-center text-sm text-cyan-400">
+                          Fragment {i}
+                        </div>
+                      </div>
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+                    <div className="absolute bottom-0 left-0 right-0 p-4">
+                      <h3 className="text-lg font-bold mb-1">Fragment Tier {i}</h3>
+                      <p className="text-gray-300 text-sm">
+                        {i === 4
+                          ? "Legendary fragment with unique effects"
+                          : i === 3
+                          ? "Epic fragment with powerful bonuses"
+                          : i === 2
+                          ? "Rare fragment with special abilities"
+                          : "Common fragment with basic effects"}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="text-center">
+                <GlowButton variant="cyan">View All Fragments</GlowButton>
               </div>
             </div>
           </section>
@@ -358,9 +412,9 @@ export default function CasualModePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { title: "Crypto Puzzler", players: "5,432" },
-              { title: "Card Collector", players: "8,765" },
-              { title: "Block Builder", players: "3,210" },
+              { title: "Crypto Puzzler", players: "5,432", reward: "Fragment NFTs" },
+              { title: "Card Collector", players: "8,765", reward: "Rare Cards" },
+              { title: "Block Builder", players: "3,210", reward: "Building Materials" },
             ].map((game, index) => (
               <Card
                 key={index}
@@ -385,6 +439,12 @@ export default function CasualModePage() {
                     </span>
                     <Badge className="bg-blue-500/20 text-blue-300 hover:bg-blue-500/30">Casual</Badge>
                   </div>
+                  <div className="bg-blue-900/20 p-3 rounded-lg">
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm text-gray-300">Rewards:</span>
+                      <span className="text-sm text-blue-300">{game.reward}</span>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -396,7 +456,52 @@ export default function CasualModePage() {
         </div>
       </section>
 
-      <Footer />
+      {/* NFT Fragments Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <Badge className="mb-4 bg-blue-700 hover:bg-blue-800 text-white px-4 py-1">NFT FRAGMENTS</Badge>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Collect & Combine</h2>
+            <p className="text-gray-300 max-w-2xl mx-auto">
+              Earn fragment NFTs through casual gameplay and combine them to create powerful items and collectibles.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+            {[1, 2, 3, 4].map((i) => (
+              <div
+                key={i}
+                className="relative aspect-square rounded-lg overflow-hidden border border-blue-500/30 group"
+              >
+                <div className="absolute inset-0">
+                  <div className="w-full h-full relative">
+                    <div className="absolute inset-0 flex items-center justify-center text-sm text-cyan-400">
+                      Fragment {i}
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <h3 className="text-lg font-bold mb-1">Fragment Tier {i}</h3>
+                  <p className="text-gray-300 text-sm">
+                    {i === 4
+                      ? "Legendary fragment with unique effects"
+                      : i === 3
+                      ? "Epic fragment with powerful bonuses"
+                      : i === 2
+                      ? "Rare fragment with special abilities"
+                      : "Common fragment with basic effects"}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <GlowButton variant="cyan">View All Fragments</GlowButton>
+          </div>
+        </div>
+      </section>
     </main>
   )
 }

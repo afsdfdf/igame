@@ -80,7 +80,9 @@ export default function LuckyModePage() {
                   description: "所有概率都透明上链，确保公平公正。"
                 }
               ]}
+              rewards={[]}
             />
+            <Footer />
           </>
         }
       >

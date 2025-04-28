@@ -63,6 +63,7 @@ export default function TeamModePage() {
                   description: "占领并控制战略点，为团队获得被动奖励。"
                 }
               ]}
+              rewards={[]}
             />
           </>
         }
@@ -497,8 +498,6 @@ export default function TeamModePage() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </main>
   )
 }

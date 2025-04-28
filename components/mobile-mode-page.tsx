@@ -134,42 +134,6 @@ export default function MobileModePage({
           </div>
         </div>
       </section>
-
-      {/* Rewards Section */}
-      <section className="py-12 bg-gradient-to-b from-black to-black/50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold mb-8 text-center">游戏奖励</h2>
-
-          <div className="space-y-4">
-            {rewards.map((reward, index) => (
-              <Card
-                key={index}
-                className="bg-black/40 backdrop-blur-sm border border-white/10"
-              >
-                <CardContent className="p-4">
-                  <div className="w-full aspect-square rounded-lg bg-gradient-to-br from-white/10 to-white/5 flex items-center justify-center mb-4">
-                    <div className="text-center">
-                      <div className="text-white text-lg font-bold">NFT 徽章 {index + 1}</div>
-                    </div>
-                  </div>
-                  <h3 className="text-lg font-bold mb-1">{reward.title}</h3>
-                  <p className="text-gray-400 text-sm mb-2">{reward.description}</p>
-                  <div className="flex justify-between items-center">
-                    <span className="text-xs text-gray-500">
-                      稀有度: {reward.rarity}
-                    </span>
-                    <span className="text-xs text-white">{reward.bonus}</span>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          <div className="mt-8 text-center">
-            <GlowButton>查看所有奖励</GlowButton>
-          </div>
-        </div>
-      </section>
       
       {/* Footer */}
       <Footer />

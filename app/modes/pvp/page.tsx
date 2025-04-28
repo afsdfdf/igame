@@ -63,6 +63,7 @@ export default function PVPModePage() {
                   description: "1v1 决斗、2v2 团队战和 4 人自由对战。"
                 }
               ]}
+              rewards={[]}
             />
           </>
         }
@@ -184,6 +185,9 @@ export default function PVPModePage() {
               </div>
             </div>
           </section>
+
+          {/* Footer */}
+          <Footer />
         </main>
       </MobilePageWrapper>
     )
@@ -308,6 +312,7 @@ export default function PVPModePage() {
         </div>
       </section>
 
+      {/* Footer */}
       <Footer />
     </main>
   )
