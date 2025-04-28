@@ -10,6 +10,7 @@ import { Dice5, ArrowLeft, Gift, Package, Sparkles } from "lucide-react"
 import { useDevice } from "@/hooks/useDevice"
 import { MobilePageWrapper } from "@/components/mobile-page-wrapper"
 import MobileModePage from "@/components/mobile-mode-page"
+import Footer from "@/components/footer"
 
 export default function LuckyModePage() {
   const { isMobile } = useDevice()
