@@ -16,7 +16,6 @@ const nextConfig = {
     'vaul',
     'framer-motion'
   ],
-  serverExternalPackages: ["react", "react-dom"],
   experimental: {
     serverActions: {
       bodySizeLimit: '2mb'
