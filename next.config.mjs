@@ -16,10 +16,11 @@ const nextConfig = {
     'vaul',
     'framer-motion'
   ],
+  serverExternalPackages: ["react", "react-dom"],
   experimental: {
-    reactRoot: true,
-    serverActions: true,
-    serverComponentsExternalPackages: ["react"]
+    serverActions: {
+      bodySizeLimit: '2mb'
+    }
   },
   webpack: (config) => {
     config.resolve.alias = {
